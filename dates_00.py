@@ -56,9 +56,57 @@ def print_date(date):
 
 print_date(now)
 
+print('------------')
+
+from datetime import time
 
 
+current_time = time(21, 6, 10)
 
+print(current_time.hour)
+print(current_time.min)
+print(current_time.minute)
+print(current_time.second)
+
+from datetime import date
+
+current_date = date(2023, 8, 3)
+
+print(current_date.year)
+print(current_date.month)
+print(current_date.day)
+
+
+current_date = date.today()
+
+print(current_date.year)
+print(current_date.month)
+print(current_date.day)
+
+current_date = date(current_date.year + 1, current_date.month, current_date.day)
+
+# current_date.year = current_date.year 
+
+print(current_date)
+
+# diff = year_2024 - current_date
+
+print(year_2024 - now)
+
+print(year_2024.date() - current_date)
+
+# with time slots
+from datetime import timedelta
+
+
+star_time_delta = timedelta(200, 100, 100, weeks = 10)
+
+end_time_delta = timedelta(300, 100, 100, weeks = 13)
+
+print(end_time_delta - star_time_delta)
+print(end_time_delta + star_time_delta)
+# print(end_time_delta * star_time_delta) # Error
+# print(end_time_delta / star_time_delta) # Error
 
 
 

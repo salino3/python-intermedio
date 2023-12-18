@@ -62,7 +62,7 @@ de Fibonacci empezando en 0.
   0, 1, 1, 2, 3, 5, 8, 13...
 """
 
-def fibonacci(prev = 0):
+def fibonacci(prev = 0, loops = 50):
    
    initialPrev = prev
    
@@ -72,7 +72,7 @@ def fibonacci(prev = 0):
    else:
       next = initialPrev + 1
 
-   for index in range(50):
+   for index in range(loops):
         if initialPrev == 0:
             print("Index: ", index, "- Number: ", prev)
             fib = prev + next
@@ -91,11 +91,42 @@ def fibonacci(prev = 0):
              next = fib
    print('----------------')
 
-   
- 
-fibonacci(-5)
 
-fibonacci()
+# fibonacci(-5)
 
-fibonacci(5)
+# fibonacci()
+
+# fibonacci(0, 100)
+
+# fibonacci(5)
+
+
+"""
+¿ES UN NÚMERO PRIMO?
+Escribe un programa que se encargue de comprobar si un número es o no primo.
+Hecho esto, imprime los números primos entre 1 y 100.
+"""
+
+def isPrime(number = 0, loop = 100):
+
+    for number in range(number, loop):
+      if number >= 2:
+        is_divisible = False
+
+        for index in range(2, number):
+            if number % index == 0:
+              is_divisible = True
+              break
+
+        if not is_divisible:
+            print(number)
+    print('--------------------')
+       
+
+isPrime()
+
+isPrime(8)
+
+
+
 

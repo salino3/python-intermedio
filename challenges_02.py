@@ -123,10 +123,42 @@ def isPrime(number = 0, loop = 100):
     print('--------------------')
        
 
-isPrime()
+# isPrime()
 
-isPrime(8)
+# isPrime(8)
+
+# isPrime(10, 120)
 
 
+"""
+INVIRTIENDO CADENAS
+Crea un programa que invierta el orden de una cadena de texto
+sin usar funciones propias del lenguaje que lo hagan de forma automática.
+- Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+"""
+
+
+def reverseWords(text):
+
+   text_len = len(text)
+   reverse_text = ""
+   for index in range(0, text_len):
+     reverse_text += text[text_len - index - 1]
+   return reverse_text
+
+
+print(reverseWords("Buenas Noches"))
+
+# #
+def reverseString(text):
+
+   reverse_text = ""
+   wordRevers = text[::-1]
+   for index in range(0, len(text)):
+     reverse_text += wordRevers[index]
+   return reverse_text
+
+
+print(reverseString("Hola mundo"))
 
 

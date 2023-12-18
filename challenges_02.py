@@ -74,18 +74,18 @@ def fibonacci(prev = 0):
 
    for index in range(50):
         if initialPrev == 0:
-            print("Index: ", index, "Number: ", prev)
+            print("Index: ", index, "- Number: ", prev)
             fib = prev + next
             prev = next
             next = fib
         else:
            if initialPrev == prev:
-             print("Index: ", index, "Number: ", prev)
+             print("Index: ", index, "- Number: ", prev)
              fib = prev + next
              prev = next
              next = fib         
            else:
-             print("Index: ", index, "Number: ", fib)
+             print("Index: ", index, "- Number: ", fib)
              fib = prev + next
              prev = next
              next = fib
@@ -98,3 +98,4 @@ fibonacci(-5)
 fibonacci()
 
 fibonacci(5)
+

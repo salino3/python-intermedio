@@ -49,3 +49,34 @@ txt_file.close()
 # with open(full_path, "r") as txt_file:
 #     print(txt_file.read())
 
+
+import json
+
+
+json_file =  open("./json_file.json", "w+")
+
+
+
+json_test = {
+    "name": "Joe",
+    "surname": "Smith", 
+    "age": {
+        "mario": 34,
+        "luigi": 23
+    },
+    "language": "Typescript",
+    "website": "https://...."
+   } 
+
+json.dump(json_test, json_file, indent = 2)
+
+
+
+
+
+
+
+
+
+
+

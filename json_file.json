@@ -1,10 +1,12 @@
 {
   "name": "Joe",
   "surname": "Smith",
-  "age": {
-    "mario": 34,
-    "luigi": 23
-  },
-  "language": "Typescript",
+  "age": 45,
+  "languages": [
+    "Typescript",
+    "Python",
+    "Swift",
+    "Kotlin"
+  ],
   "website": "https://...."
 }

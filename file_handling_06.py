@@ -56,27 +56,64 @@ import json
 json_file =  open("./json_file.json", "w+")
 
 
-
 json_test = {
     "name": "Joe",
     "surname": "Smith", 
-    "age": {
-        "mario": 34,
-        "luigi": 23
-    },
-    "language": "Typescript",
+    "age": 45,
+    "languages": ["Typescript", "Python", "Swift", "Kotlin"],
     "website": "https://...."
    } 
 
 json.dump(json_test, json_file, indent = 2)
 
+json_file.close()
+
+
+with open("./json_file.json") as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
+
+
+json_dict = json.load(open("./json_file.json"))
+
+
+print(json_dict)
+print(type(json_dict))
+print(json_dict["name"])
+print(json_dict["languages"])
+print(json_dict["languages"][1])
+
+print('------------------')
+
+
+# .csv file 
+
+import csv
+
+csv_file =  open("./csv_file.csv", "w+")
+
+csv_writer = csv.writer(csv_file)
+
+csv_writer.writerow(["name", "surname", "age", "language", "website"])
+csv_writer.writerow(["Tom", "Smith", 35, "Python", "https://www.google.es"])
+csv_writer.writerow(["Tom", "", 40, "Javascript", ""])
+
+csv_file.close()
+
+with open("./csv_file.csv") as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
+
+
+# .xlsx file
+
+# import xlrd # has to be installed
 
 
 
 
+#.xml file
 
-
-
-
+import xml
 
 
